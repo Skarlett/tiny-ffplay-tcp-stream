@@ -22,8 +22,7 @@
 		rustPackages.clippy
 		clang
                 xorg.libXrandr
-                ffmpeg
-                arcan.ffmpeg
+                jellyfin-ffmpeg
 	  ];
           RUST_SRC_PATH = rustPlatform.rustLibSrc;
           LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath buildInputs;
