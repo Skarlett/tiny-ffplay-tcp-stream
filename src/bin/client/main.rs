@@ -7,13 +7,10 @@ use structopt::StructOpt;
 #[derive(Debug, StructOpt)]
 #[structopt(name = "ScreenShare-sender", about = "Sends Screenshare Stream")]
 struct Opt {
-    /// Activate debug mode
-    // short and long flags (-d, --debug) will be deduced from the field's name
-    #[structopt(short, long)]
+
+    #[structopt(short, long, default_value="0.0.0.0:9090")]
     connect: String,
 
-    /// Set speed
-    // we don't want to name it "speed", need to look smart
     #[structopt(long, default_value = "60")]
     fps: u32,
 
